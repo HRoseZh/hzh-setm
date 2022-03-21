@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-coacheteam" />
+        <module name="hzh-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hzh-common" target="1.8" />
+      <module name="hzh-service" target="1.8" />
+      <module name="hzh-setm" target="1.8" />
+      <module name="service-coacheteam" target="1.8" />
+      <module name="service-coachteam" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hzh-common" options="-parameters" />
+      <module name="hzh-service" options="-parameters" />
+      <module name="hzh-setm" options="-parameters" />
+      <module name="service-coacheteam" options="-parameters" />
+      <module name="service-coachteam" options="-parameters" />
+    </option>
+  </component>
+</project>

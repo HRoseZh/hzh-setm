@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hzh-common/hzh-common.iml" filepath="$PROJECT_DIR$/hzh-common/hzh-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hzh-service/hzh-service.iml" filepath="$PROJECT_DIR$/hzh-service/hzh-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hzh-setm.iml" filepath="$PROJECT_DIR$/hzh-setm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hzh-service/service-coachteam/service-coacheteam.iml" filepath="$PROJECT_DIR$/hzh-service/service-coachteam/service-coacheteam.iml" />
+    </modules>
+  </component>
+</project>
