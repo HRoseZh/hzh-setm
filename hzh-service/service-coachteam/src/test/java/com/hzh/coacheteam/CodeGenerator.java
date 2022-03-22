@@ -68,7 +68,8 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("basketball_team_info"); //多表可以用逗号分割
+        strategy.setInclude("team_info","china_city","coach_team-info","foul_info","global_location","order_master","physical_held_info","player_info",
+                "umpire_info","user_customer_balance_log","user_customer_info","user_customer_level_info","user_customer_login_log","war_info"); //多表可以用逗号分割
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 

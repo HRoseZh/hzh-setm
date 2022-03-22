@@ -9,7 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @SpringBootApplication
-@MapperScan("com.hzh.coachteam.mapper")
+@MapperScan("com.hzh.common.mapper")
 @EnableSwagger2
 @EnableWebMvc
 public class ServiceCoacheteamApplication {
