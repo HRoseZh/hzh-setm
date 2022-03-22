@@ -27,7 +27,6 @@ import java.util.Map;
 @RequestMapping("/team")
 public class PlayerInfoController {
 
-
     @Resource
     private PlayerInfoService playerInfoService;
 
@@ -39,13 +38,7 @@ public class PlayerInfoController {
         //current 当前页  size 每页显示数量
         Page<PlayerInfo> page= new Page<PlayerInfo>(current,size);
         IPage<PlayerInfo> playerInfoIPage = playerInfoService.selectPage(page);
-        if (ObjectUtils.isNotEmpty(playerInfoIPage)){
-            return ResultVO.ok(playerInfoIPage);
-        }else {
-            res.put("code","0");
-            res.put("data","查询失败");
-            return ResultVO.ok(res);
-        }
+        return ResultVO.ok(playerInfoIPage);
     }
 
 
