@@ -35,13 +35,7 @@ public class ChinaCityController {
         Map res = new HashMap();
         Page<ChinaCity> page= new Page<ChinaCity>(current,size);
         IPage<ChinaCity> chinaCityIPage = chinaCityService.selectPage(page);
-        if (ObjectUtils.isNotEmpty(chinaCityIPage)){
-            return ResultVO.ok(chinaCityIPage);
-        }else {
-            res.put("code","0");
-            res.put("data","查询失败");
-            return ResultVO.ok(res);
-        }
+        return ResultVO.ok(chinaCityIPage);
     }
 
 

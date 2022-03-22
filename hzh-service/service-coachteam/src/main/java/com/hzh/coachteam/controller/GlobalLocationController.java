@@ -26,7 +26,6 @@ import java.util.Map;
 @RequestMapping("/team")
 public class GlobalLocationController {
 
-
     @Resource
     private  GlobalLocationService globalLocationService;
 
@@ -37,13 +36,7 @@ public class GlobalLocationController {
         Map res = new HashMap();
         Page<GlobalLocation> page= new Page<GlobalLocation>(current,size);
         IPage<GlobalLocation> globalLocationIPage = globalLocationService.selectPage(page);
-        if (ObjectUtils.isNotEmpty(globalLocationIPage)){
-            return ResultVO.ok(globalLocationIPage);
-        }else {
-            res.put("code","0");
-            res.put("data","查询失败");
-            return ResultVO.ok(res);
-        }
+        return ResultVO.ok(globalLocationIPage);
     }
 
 
