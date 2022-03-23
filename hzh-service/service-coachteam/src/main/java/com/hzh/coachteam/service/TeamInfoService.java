@@ -1,5 +1,7 @@
 package com.hzh.coachteam.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hzh.common.pojo.po.TeamInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TeamInfoService extends IService<TeamInfo> {
 
+    IPage<TeamInfo> selectPage(Page<TeamInfo> page);
 }

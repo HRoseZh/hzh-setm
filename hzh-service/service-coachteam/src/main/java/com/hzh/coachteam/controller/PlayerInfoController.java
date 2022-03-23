@@ -8,6 +8,7 @@ import com.hzh.coachteam.service.PlayerInfoService;
 import com.hzh.common.pojo.po.GlobalLocation;
 import com.hzh.common.pojo.po.PlayerInfo;
 import com.hzh.common.pojo.vo.ResultVO;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +26,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/team")
+@Api("运动员信息配置接口")
 public class PlayerInfoController {
 
     @Resource
@@ -36,7 +38,7 @@ public class PlayerInfoController {
         int size = null == map.get("size") ? 10 : Integer.parseInt(map.get("size").toString());
         Map res = new HashMap();
         //current 当前页  size 每页显示数量
-        Page<PlayerInfo> page= new Page<PlayerInfo>(current,size);
+        Page<PlayerInfo> page= new Page<>(current, size);
         IPage<PlayerInfo> playerInfoIPage = playerInfoService.selectPage(page);
         return ResultVO.ok(playerInfoIPage);
     }
