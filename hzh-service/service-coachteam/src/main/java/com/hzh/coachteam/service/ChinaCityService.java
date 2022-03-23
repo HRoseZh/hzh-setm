@@ -4,7 +4,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hzh.common.pojo.po.ChinaCity;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hzh.common.pojo.po.GlobalLocation;
+
+import java.util.List;
 
 /**
  * <p>
@@ -17,4 +18,9 @@ import com.hzh.common.pojo.po.GlobalLocation;
 public interface ChinaCityService extends IService<ChinaCity> {
 
     IPage<ChinaCity> selectPage(Page<ChinaCity> page);
+
+    List<ChinaCity> getAll();
+
+    List<ChinaCity> getChildByPid(int pid);
+
 }

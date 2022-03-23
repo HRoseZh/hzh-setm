@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -17,6 +18,7 @@ import lombok.EqualsAndHashCode;
  * @since 2022-03-22
  */
 @Data
+@Builder
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="ChinaCity对象", description="")
 public class ChinaCity implements Serializable {

@@ -8,6 +8,7 @@ import com.hzh.coachteam.service.UserCustomerLevelInfoService;
 import com.hzh.common.pojo.po.ChinaCity;
 import com.hzh.common.pojo.po.UserCustomerLevelInfo;
 import com.hzh.common.pojo.vo.ResultVO;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,12 +30,13 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/team")
+@Api("用户级别信息配置接口")
 public class UserCustomerLevelInfoController {
 
     @Resource
     private UserCustomerLevelInfoService userCustomerLevelInfoService;
 
-    @PostMapping("/userlevel/getAll")
+    @PostMapping("/userLevelInfo/getAll")
     public ResultVO getAll(@RequestBody HashMap map){
         int current = null == map.get("current") ? 1 : Integer.parseInt(map.get("current").toString());
         int size = null == map.get("size") ? 10 : Integer.parseInt(map.get("size").toString());
